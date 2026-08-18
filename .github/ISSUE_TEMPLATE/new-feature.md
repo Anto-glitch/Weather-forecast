@@ -1,5 +1,5 @@
 ---
-name: New feature
+name: New issue
 about: 'New task '
 title: ''
 labels: ''
