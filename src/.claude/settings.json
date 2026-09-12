@@ -1,5 +1,9 @@
 {
   "enabledPlugins": {
     "expo@claude-plugins-official": true
-  }
+  },
+  "files exclude": {
+      "**/.git": false
+    }
+
 }
