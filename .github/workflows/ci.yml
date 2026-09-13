@@ -21,4 +21,4 @@ jobs:
       - name: check types
         run: tsc --noEmit
       - name: run linting
-        run: eslint .
+        run: eslint . --fix
