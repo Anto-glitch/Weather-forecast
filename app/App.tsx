@@ -9,7 +9,8 @@ export default function App() {
       <Host matchContents>
         <Checkbox value={checked} onCheckedChange={setChecked} />
       </Host>
-      <Text className="text-xl font-bold text-blue-500">Welcome to Nativewind!</Text>
+      <Text className="text-xl font-bold text-blue-500">Weather App</Text>
+      <Text  > Sunny Day!</Text>
     </View>
   );
 }
