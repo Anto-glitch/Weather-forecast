@@ -10,7 +10,7 @@ export default function App() {
         <Checkbox value={checked} onCheckedChange={setChecked} />
       </Host>
       <Text className="text-xl font-bold text-blue-500">Weather App</Text>
-      <Text  > Sunny Day!</Text>
+      <Text className="text-lg text-gray-500">Sunny Day!</Text>
     </View>
   );
 }
