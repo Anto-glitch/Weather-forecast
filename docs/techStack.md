@@ -18,3 +18,4 @@ In the table below there are all technologies used in Weather forecast project
 | `nativewind `| UI styling | |
 | `zod` | weather data validation | |
 | `eslint ` + `prettier` | code validation | |
+| `tanstack/react-query` | data fetching | |
