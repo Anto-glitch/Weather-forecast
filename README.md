@@ -8,7 +8,7 @@ from Open-Meteo API according to client gps location or chosen city
 - rain amount
 - cloud 
 ## Tech stack
-
+`docs/techStack.md`
 ## Ui/UIX plans
 figma: 
 
