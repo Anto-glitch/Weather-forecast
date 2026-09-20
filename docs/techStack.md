@@ -6,8 +6,8 @@ In the table below there are all technologies used in Weather forecast project
 * **Framework:** React Native (Expo SDK 57)
 * **Enviroment:** Node.js (v20+ LTS)
 * **Package menager:** npm
-* **Router:**expo-router
-* **CI:**github-workflows
+* **Router:** expo-router
+* **CI:** github-workflows
 
 ##2.Crucial dependecies  
 | Plugin/Library | Usage | Where used |
