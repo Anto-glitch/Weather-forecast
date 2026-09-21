@@ -17,5 +17,5 @@ In the table below there are all technologies used in Weather forecast project
 | `expo-location ` | download user geolocation | `src/services` |
 | `nativewind `| UI styling | |
 | `zod` | weather data validation | |
-| `eslint ` + `prettier` | code validation | |
+| `eslint ` + `prettier` + `tanstack/eslint-plugin-query`| code validation | |
 | `tanstack/react-query` | data fetching | |
