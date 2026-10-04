@@ -13,6 +13,7 @@ In the table below there are all technologies used in Weather forecast project
 | Plugin/Library | Usage | Where used |
 |---|---|---|
 | `expo/ui` | import basic components | `src/components` |
+| `expo-file-system` | access and edit local files |  |
 | `axios` | download weather data | `src/api ` |
 | `expo-location ` | download user geolocation | `src/services` |
 | `nativewind `| UI styling | |
