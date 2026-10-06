@@ -7,7 +7,6 @@ export default function App() {
       <Text className="text-xl font-bold text-blue-500">Weather App</Text>
       <Button title="Get Weather" onPress={() => void getWeather(52.52, 13.41)} />
       <Button title="Check Weather" onPress={() => void checkWeather()} />
-
     </View>
   );
 }
