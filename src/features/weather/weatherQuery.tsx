@@ -1,14 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { getWeather } from './getWeather';
-import { useIsFocused } from '@react-navigation/native';
 
-export const useWeatherQuery = () => {
-  const focused = useIsFocused();
+export const useWeatherQuery = (userLatitude: number, userLongitude: number) => {
   const WeatherQuery = useQuery({
-    queryKey: ['weather'],
-    queryFn: () => getWeather(37.7749, -122.4194),
-    subscribed: focused,
-    staleTime: 1000 * 10, // 10 seconds for demonstration purposes
+    queryKey: ['weather', userLatitude, userLongitude],
+    queryFn: () => getWeather(userLatitude, userLongitude),
+    staleTime: 1000 * 30, // 30 seconds for demonstration purposes
+    //staleTime: 1000 * 60 * 15, // 15 minutes for production
   });
   return WeatherQuery;
 };
