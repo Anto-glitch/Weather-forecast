@@ -4,7 +4,7 @@ import { checkWeather } from '../features/weather/checkWeather';
 import { useWeatherQuery } from '../features/weather/weatherQuery';
 
 export default function App() {
-  const {data,isLoading,isError} = useWeatherQuery(52.52, 13.41);
+  const { data, isLoading, isError } = useWeatherQuery(52.52, 13.41);
   if (isLoading) {
     return (
       <View className="flex-1 items-center justify-center bg-white">
