@@ -1,10 +1,10 @@
-import NetInfo from '@react-native-community/netinfo'
-import { onlineManager } from '@tanstack/react-query'
+import NetInfo from '@react-native-community/netinfo';
+import { onlineManager } from '@tanstack/react-query';
 
 export function useOnlineStatus() {
-    onlineManager.setEventListener((setOnline) => {
-  return NetInfo.addEventListener((state) => {
-    setOnline(!!state.isConnected)
-  })
-})
+  onlineManager.setEventListener((setOnline) => {
+    return NetInfo.addEventListener((state) => {
+      setOnline(!!state.isConnected);
+    });
+  });
 }

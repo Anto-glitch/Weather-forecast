@@ -14,7 +14,7 @@ export async function getWeather(latitude: number, longitude: number) {
 
   try {
     const response = await axios.get(
-      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&minutely_15=temperature_2m&forecast_days=3`,
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,precipitation,apparent_temperature,wind_speed_10m,wind_direction_10m,cloud_cover,pressure_msl,weather_code,wind_gusts_10m&current=temperature_2m,is_day,weather_code&forecast_days=3`,
     );
     const data = weatherSchema.parse(response.data);
     file.write(JSON.stringify(data, null, 4));
