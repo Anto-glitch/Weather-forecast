@@ -1,8 +1,8 @@
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import '../../global.css';
 import { Stack } from 'expo-router';
-import { useAppStateFocus } from '../features/weather/useAppStateFocus';
-import { useOnlineStatus } from '../features/weather/useOnlineStatus';
+import { useAppStateFocus } from '../hooks/useAppStateFocus';
+import { useOnlineStatus } from '../hooks/useOnlineStatus';
 
 const queryClient = new QueryClient();
 

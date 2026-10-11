@@ -1,11 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
-import { getWeather } from './getWeather';
+import { getWeather } from '../api/getWeather';
+import { weatherKeys } from './weatherKeys';
 
 export const useWeatherQuery = (userLatitude: number, userLongitude: number) => {
-  const WeatherQuery = useQuery({
-    queryKey: ['weather', userLatitude, userLongitude],
+  return useQuery({
+    queryKey: weatherKeys.byLocation(userLatitude, userLongitude),
     queryFn: () => getWeather(userLatitude, userLongitude),
     staleTime: 1000 * 10, // 10 seconds
   });
-  return WeatherQuery;
 };
+
+export const useWeather = useWeatherQuery;

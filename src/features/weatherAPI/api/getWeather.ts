@@ -1,7 +1,7 @@
 import axios from 'axios';
 import NetInfo from '@react-native-community/netinfo';
 import { File, Paths } from 'expo-file-system';
-import { weatherSchema } from './weatherSchema';
+import { weatherSchema } from '../schemas/weatherSchema';
 
 export async function getWeather(latitude: number, longitude: number) {
   const file = new File(Paths.document, 'weather_data.json');
