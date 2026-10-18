@@ -1,16 +1,26 @@
 import { Text, View } from 'react-native';
-import { Host, Checkbox } from '@expo/ui/jetpack-compose';
-import { useState } from 'react';
+import { useWeather } from '../features/weatherAPI/queries/weatherQuery';
 
 export default function App() {
-  const [checked, setChecked] = useState(false);
+  const { data, isLoading, isError } = useWeather(52.52, 13.41);
+  if (isLoading) {
+    return (
+      <View className="flex-1 items-center justify-center bg-white">
+        <Text className="text-xl font-bold text-blue-500">Loading...</Text>
+      </View>
+    );
+  }
+  if (isError) {
+    return (
+      <View className="flex-1 items-center justify-center bg-white">
+        <Text className="text-xl font-bold text-blue-500">Error</Text>
+      </View>
+    );
+  }
+
   return (
     <View className="flex-1 items-center justify-center bg-white">
-      <Host matchContents>
-        <Checkbox value={checked} onCheckedChange={setChecked} />
-      </Host>
-      <Text className="text-xl font-bold text-blue-500">Weather App</Text>
-      <Text className="text-lg text-gray-500">Sunny Day!</Text>
+      <Text className="text-xl font-bold text-blue-500">Weather App {data?.generationtime_ms}</Text>
     </View>
   );
 }
