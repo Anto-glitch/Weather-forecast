@@ -1,1 +1,0 @@
-//this is place to add types for weather data(which we will have from api)
